@@ -14,3 +14,6 @@ mysql:
   database: itemsdb
   user: root
   password: rootpassword
+serviceAccount:
+  create: true
+  name: ""
