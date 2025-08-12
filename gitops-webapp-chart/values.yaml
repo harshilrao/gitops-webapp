@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: n01717500/gitops-webapp
+  pullPolicy: IfNotPresent
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 5000
+
+mysql:
+  rootPassword: rootpassword
+  database: itemsdb
+  user: root
+  password: rootpassword

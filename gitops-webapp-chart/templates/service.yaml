@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "gitops-webapp-chart.fullname" . }}
+  labels:
+    {{- include "gitops-webapp-chart.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  port: 5000
+  targetPort: 5000
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "gitops-webapp-chart.selectorLabels" . | nindent 4 }}
