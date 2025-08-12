@@ -17,3 +17,11 @@ mysql:
 serviceAccount:
   create: true
   name: ""
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - /
+  tls: []
